@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlord - Événements</title>
+  <link rel="stylesheet" href="fansite.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* --- Section Événements --- */
+    .events-section { padding: 2rem; text-align: center; }
+    .events-section h2 {
+      color: #ffd700;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 8px black;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #d4af37;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .filters { margin-bottom: 2rem; }
+    .filter-btn {
+      background: #660000;
+      color: #ffd700;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.3rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .filter-btn.active, .filter-btn:hover { background: #d4af37; color: #000; }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+
+    .event-card {
+      background: rgba(0,0,0,0.6);
+      border: 2px solid #660000;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Arrière-plan année */
+    .event-card::before {
+      content: attr(data-year);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      font-weight: bold;
+      color: rgba(212,175,55,0.2);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .event-card img,
+    .event-card h3,
+    .event-card p,
+    .event-card .date { position: relative; z-index: 1; }
+
+    .event-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
+    }
+    .event-card h3 { color: #ffd700; margin-bottom: 0.5rem; }
+    .event-card p { font-size: 0.9rem; line-height: 1.4; color: #e5e5e5; }
+    .event-card .date { font-size: 0.9rem; color: #d4af37; margin-top: 0.5rem; }
+
+    .event-card.hide { opacity: 0; transform: translateY(20px); pointer-events: none; height: 0; margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Overlord Fansite</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="realisations.html">Univers</a></li>
+        <li><a href="evenements.html" class="active">Événements</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="videos.html">Vidéos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="events-section">
+      <h2>Événements Overlord</h2>
+
+      <div class="filters">
+        <button class="filter-btn active" data-type="all">Tous</button>
+        <button class="filter-btn" data-type="anime">Anime</button>
+        <button class="filter-btn" data-type="film">Film</button>
+        <button class="filter-btn" data-type="lightnovel">Light Novels</button>
+        <button class="filter-btn" data-type="cosplay">Cosplay</button>
+      </div>
+
+      <div class="events-grid">
+        <!-- 2025 -->
+        <div class="event-card" data-type="anime" data-year="2025">
+          <img src="img/event_anime2025.jpg" alt="Projection Anime 2025">
+          <h3>Projection spéciale Anime</h3>
+          <p>Visionnage des épisodes cultes avec commentaires des créateurs.</p>
+          <span class="date">12 septembre 2025</span>
+        </div>
+        <div class="event-card" data-type="film" data-year="2025">
+          <img src="img/event_film2025.jpg" alt="Film 2025">
+          <h3>Avant-première Film</h3>
+          <p>Projection spéciale du dernier film Overlord.</p>
+          <span class="date">15 octobre 2025</span>
+        </div>
+        <div class="event-card" data-type="cosplay" data-year="2025">
+          <img src="img/event_cosplay2025.jpg" alt="Cosplay 2025">
+          <h3>Concours Cosplay Nazarick</h3>
+          <p>Concours et goodies exclusifs pour les fans.</p>
+          <span class="date">5 novembre 2025</span>
+        </div>
+
+        <!-- 2024 -->
+        <div class="event-card" data-type="lightnovel" data-year="2024">
+          <img src="img/event_lightnovel2024.jpg" alt="Light Novel 2024">
+          <h3>Publication Light Novel Volume 17</h3>
+          <p>Sortie du nouveau volume de la série Light Novel Overlord.</p>
+          <span class="date">20 juin 2024</span>
+        </div>
+        <div class="event-card" data-type="anime" data-year="2024">
+          <img src="img/event_anime2024.jpg" alt="Anime 2024">
+          <h3>Projection Anime Saison 3</h3>
+          <p>Projection spéciale pour la saison 3 de l’anime Overlord.</p>
+          <span class="date">3 août 2024</span>
+        </div>
+        <div class="event-card" data-type="film" data-year="2024">
+          <img src="img/event_film2024.jpg" alt="Film 2024">
+          <h3>Film Compilation Arc 6</h3>
+          <p>Projection regroupant les arcs majeurs du film Overlord.</p>
+          <span class="date">11 décembre 2024</span>
+        </div>
+
+        <!-- 2023 -->
+        <div class="event-card" data-type="anime" data-year="2023">
+          <img src="img/event_anime2023.jpg" alt="Anime 2023">
+          <h3>Diffusion Anime S3 - Partie 2</h3>
+          <p>Diffusion de la deuxième partie de la saison 3 de l’anime.</p>
+          <span class="date">15 mars 2023</span>
+        </div>
+        <div class="event-card" data-type="cosplay" data-year="2023">
+          <img src="img/event_cosplay2023.jpg" alt="Cosplay 2023">
+          <h3>Concours Cosplay International</h3>
+          <p>Fans du monde entier participent à un concours en ligne.</p>
+          <span class="date">2 juillet 2023</span>
+        </div>
+        <div class="event-card" data-type="lightnovel" data-year="2023">
+          <img src="img/event_lightnovel2023.jpg" alt="Light Novel 2023">
+          <h3>Publication Volume 16</h3>
+          <p>Nouveau volume disponible dans toutes les librairies japonaises.</p>
+          <span class="date">10 septembre 2023</span>
+        </div>
+
+        <!-- 2022 -->
+        <div class="event-card" data-type="film" data-year="2022">
+          <img src="img/event_film2022.jpg" alt="Film 2022">
+          <h3>Avant-première Film Compilation</h3>
+          <p>Projection regroupant les arcs majeurs de la série animée.</p>
+          <span class="date">18 janvier 2022</span>
+        </div>
+        <div class="event-card" data-type="anime" data-year="2022">
+          <img src="img/event_anime2022.jpg" alt="Anime 2022">
+          <h3>Diffusion Anime S2</h3>
+          <p>Rediffusion complète de la saison 2 sur les chaînes principales.</p>
+          <span class="date">7 mars 2022</span>
+        </div>
+        <div class="event-card" data-type="cosplay" data-year="2022">
+          <img src="img/event_cosplay2022.webp" alt="Cosplay 2022">
+          <h3>Cosplay Contest Online</h3>
+          <p>Concours virtuel pour les fans internationaux.</p>
+          <span class="date">18 juillet 2022</span>
+        </div>
+
+        <!-- 2021 -->
+        <div class="event-card" data-type="lightnovel" data-year="2021">
+          <img src="img/event_lightnovel2021.jpg" alt="Light Novel 2021">
+          <h3>Publication Volume 15</h3>
+          <p>Sortie officielle du volume 15 de la saga Light Novel.</p>
+          <span class="date">22 mai 2021</span>
+        </div>
+        <div class="event-card" data-type="anime" data-year="2021">
+          <img src="img/event_anime2021.jpg" alt="Anime 2021">
+          <h3>Projection spéciale Anime S3</h3>
+          <p>Visionnage des meilleurs épisodes et scènes emblématiques.</p>
+          <span class="date">9 novembre 2021</span>
+        </div>
+
+        <!-- 2020 -->
+        <div class="event-card" data-type="anime" data-year="2020">
+          <img src="img/event_anime2020.webp" alt="Anime 2020">
+          <h3>Diffusion Anime S2</h3>
+          <p>Diffusion de la saison 2 de l’anime Overlord sur les chaînes principales.</p>
+          <span class="date">12 janvier 2020</span>
+        </div>
+        <div class="event-card" data-type="film" data-year="2020">
+          <img src="img/event_film2020.jpg" alt="Film 2020">
+          <h3>Film Compilation Arc 5</h3>
+          <p>Projection regroupant les événements majeurs du film Overlord.</p>
+          <span class="date">25 août 2020</span>
+        </div>
+        <div class="event-card" data-type="cosplay" data-year="2020">
+          <img src="img/event_cosplay2020.webp" alt="Cosplay 2020">
+          <h3>Concours Cosplay Local</h3>
+          <p>Concours cosplay local pour les fans de l’univers Overlord.</p>
+          <span class="date">5 décembre 2020</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer>
+  <div class="footer-left">
+    <a href="https://github.com/Enzocys/fansite" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+
+  <div class="footer-center fan-links">
+    <a href="https://overlordmaruyama.fandom.com/wiki/Overlord_Wiki" target="_blank">Overlord Wiki (Fandom)</a>
+    <a href="https://www.nautiljon.com/animes/overlord.html" target="_blank">Nautiljon - Overlord</a>
+  </div>
+
+  <div class="footer-right social-icons">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+
+
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const eventCards = document.querySelectorAll('.event-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const type = btn.dataset.type;
+        eventCards.forEach(card => {
+          if(type === 'all' || card.dataset.type === type) {
+            card.classList.remove('hide');
+          } else {
+            card.classList.add('hide');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
