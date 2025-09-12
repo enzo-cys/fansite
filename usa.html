@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USA Fansite - Discover America</title>
+  <link rel="stylesheet" href="usa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Discover America</h1> 
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#cliches">Clichés</a></li>
+        <li><a href="#stats">Statistics</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#villes">Cities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Welcome to the Land of the Free</h2>
+      <p>Explore the United States of America, from sea to shining sea. Discover the culture, diversity, and spirit that makes America unique.</p>
+      <a href="#cliches" class="btn">Discover America</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- Clichés Section -->
+    <section class="cliches" id="cliches">
+      <h2>American Clichés: Myth vs Reality</h2>
+      <div class="cliches-container">
+        <div class="cliche-card">
+          <div class="card-image">
+            <i class="fas fa-hamburger"></i>
+          </div>
+          <div class="card-text">
+            <h3>Fast Food Culture</h3>
+            <p>While fast food is popular, America also has diverse culinary traditions and a growing farm-to-table movement.</p>
+          </div>
+        </div>
+        
+        <div class="cliche-card">
+          <div class="card-image">
+            <i class="fas fa-car"></i>
+          </div>
+          <div class="card-text">
+            <h3>Car-Dependent Society</h3>
+            <p>Though cars are common, many cities have excellent public transportation and bike-friendly infrastructure.</p>
+          </div>
+        </div>
+        
+        <div class="cliche-card">
+          <div class="card-image">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="card-text">
+            <h3>Hollywood Dreams</h3>
+            <p>Entertainment industry is significant, but America excels in technology, science, and many other fields too.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats" id="stats">
+      <h2>America by the Numbers</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">331M</div>
+          <div class="stat-label">Population</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50</div>
+          <div class="stat-label">States</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">9.8M</div>
+          <div class="stat-label">Square Kilometers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">400+</div>
+          <div class="stat-label">National Parks</div>
+        </div>
+      </div>
+      
+      <div class="fun-facts">
+        <h3>Fun Facts</h3>
+        <div class="facts-container">
+          <div class="fact">
+            <i class="fas fa-mountain"></i>
+            <p>Alaska has more coastline than all other US states combined</p>
+          </div>
+          <div class="fact">
+            <i class="fas fa-language"></i>
+            <p>Over 350 languages are spoken in American homes</p>
+          </div>
+          <div class="fact">
+            <i class="fas fa-lightbulb"></i>
+            <p>The US leads the world in scientific research and Nobel Prize winners</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz" id="quiz">
+      <h2>Test Your American Knowledge</h2>
+      <div class="quiz-container">
+        <div class="quiz-question">
+          <h3>Which city is known as the "Big Apple"?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option" data-answer="correct">New York City</button>
+            <button class="quiz-option">Los Angeles</button>
+            <button class="quiz-option">Chicago</button>
+            <button class="quiz-option">Boston</button>
+          </div>
+        </div>
+        
+        <div class="quiz-question">
+          <h3>What is the tallest mountain in the United States?</h3>
+          <div class="quiz-options">
+            <button class="quiz-option">Mount Rainier</button>
+            <button class="quiz-option" data-answer="correct">Denali (Mount McKinley)</button>
+            <button class="quiz-option">Mount Whitney</button>
+            <button class="quiz-option">Mount Washington</button>
+          </div>
+        </div>
+        
+        <div class="quiz-result" id="quiz-result"></div>
+      </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section class="villes" id="villes">
+      <h2>Iconic American Cities</h2>
+      <div class="cities-container">
+        <div class="city-card">
+          <div class="city-image">
+            <img src="images/newyork.jpg" alt="New York City">
+          </div>
+          <div class="city-content">
+            <h3>New York City</h3>
+            <p>The city that never sleeps, home to the Statue of Liberty, Central Park, and Broadway. A melting pot of cultures and the financial capital of the world.</p>
+            <div class="city-highlights">
+              <span class="highlight">Population: 8.3M</span>
+              <span class="highlight">Founded: 1624</span>
+              <span class="highlight">Nickname: The Big Apple</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="city-card">
+          <div class="city-image">
+            <img src="images/losangeles.jpg" alt="Los Angeles">
+          </div>
+          <div class="city-content">
+            <h3>Los Angeles</h3>
+            <p>City of Angels and entertainment capital, home to Hollywood, beautiful beaches, and perfect weather year-round.</p>
+            <div class="city-highlights">
+              <span class="highlight">Population: 4M</span>
+              <span class="highlight">Founded: 1781</span>
+              <span class="highlight">Nickname: City of Angels</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="city-card">
+          <div class="city-image">
+            <img src="images/chicago.jpg" alt="Chicago">
+          </div>
+          <div class="city-content">
+            <h3>Chicago</h3>
+            <p>The Windy City, known for its stunning architecture, deep-dish pizza, and vibrant arts scene along Lake Michigan.</p>
+            <div class="city-highlights">
+              <span class="highlight">Population: 2.7M</span>
+              <span class="highlight">Founded: 1837</span>
+              <span class="highlight">Nickname: The Windy City</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-left">
+      <a href="https://github.com/enzo-cys/fansite" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+
+    <div class="footer-center fan-links">
+      <a href="https://www.usa.gov" target="_blank">Official USA Government</a>
+      <a href="https://www.visittheusa.com" target="_blank">Visit the USA</a>
+    </div>
+
+    <div class="footer-right social-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Simple quiz functionality
+    document.querySelectorAll('.quiz-option').forEach(button => {
+      button.addEventListener('click', function() {
+        const question = this.closest('.quiz-question');
+        const options = question.querySelectorAll('.quiz-option');
+        const result = document.getElementById('quiz-result');
+        
+        options.forEach(opt => {
+          opt.disabled = true;
+          if (opt.dataset.answer === 'correct') {
+            opt.style.backgroundColor = '#4CAF50';
+          } else if (opt === this && opt.dataset.answer !== 'correct') {
+            opt.style.backgroundColor = '#f44336';
+          }
+        });
+        
+        if (this.dataset.answer === 'correct') {
+          result.innerHTML = '<p style="color: #4CAF50;">Correct! Well done!</p>';
+        } else {
+          result.innerHTML = '<p style="color: #f44336;">Incorrect. Try again next time!</p>';
+        }
+      });
+    });
+
+    // Smooth scrolling for navigation
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
