@@ -82,6 +82,8 @@
     btn.setAttribute('aria-expanded', 'false');
     nav.setAttribute('aria-hidden', 'true');
 
+    // initialisation
+
   // openMenu : ouvre la navigation mobile et piège le focus à l'intérieur
   function openMenu(){
       lastFocused = document.activeElement;
@@ -101,9 +103,16 @@
       lastFocused = null;
     }
 
-    btn.addEventListener('click', function(){
+    // protect against the document-level click listener closing the menu immediately
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
       const expanded = btn.getAttribute('aria-expanded') === 'true';
-      if(expanded) closeMenu(); else openMenu();
+      if(expanded) closeMenu(); else {
+        openMenu();
+        // briefly mark header to ignore the next document click
+        header.classList.add('menu-opening');
+        setTimeout(()=> header.classList.remove('menu-opening'), 250);
+      }
     });
 
   // lorsque un lien de nav est cliqué, fermer le menu mobile (utile sur petits écrans)
@@ -117,6 +126,8 @@
     // ferme si clic en dehors du header quand le menu est ouvert
     document.addEventListener('click', function(e){
       if(!header.classList.contains('open')) return;
+      // if we are in the brief opening window, ignore this click
+      if(header.classList.contains('menu-opening')) return;
       if(header.contains(e.target)) return;
       closeMenu();
     });

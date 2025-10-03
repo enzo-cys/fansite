@@ -370,9 +370,10 @@ footer { display:flex; justify-content:space-between; align-items:center; flex-w
 
 @media (max-width: 768px) {
   /* affiche le bouton menu mobile */
-  #nav-toggle { display:inline-block; background:transparent; border:none; color:#ffd700; font-size:1.2rem; cursor:pointer; padding:6px 8px; border-radius:6px; }
+  #nav-toggle { display:inline-block; background:transparent; border:none; color:#ffd700; font-size:1.2rem; cursor:pointer; padding:10px 12px; border-radius:8px; min-width:44px; min-height:44px; position:relative; z-index:100; touch-action:manipulation; }
+  /* keep the icon visually small while increasing hit area */
+  #nav-toggle i { font-size:1.0rem; display:inline-block; }
   #nav-toggle:focus { outline:2px solid #d4af37; }
-
   header { padding:0.8rem 1rem; }
   header h1 { font-size:1.5rem; }
   /* navigation mobile empilée */
