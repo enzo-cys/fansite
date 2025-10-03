@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fansite Overlord</title>
   <link rel="stylesheet" href="fansite.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,10 +15,11 @@
     Votre navigateur ne supporte pas la vidéo HTML5.
   </video>
 
-  <!-- Header -->
+  <!-- En-tête -->
   <header>
-    <h1>Overlord Fansite</h1> 
-    <nav>
+    <h1>Overlord Fansite</h1>
+  <button id="nav-toggle" aria-label="Ouvrir le menu" aria-controls="site-navigation" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+  <nav id="site-navigation">
       <ul>
         <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="actualites.html">Actualités</a></li>
@@ -30,7 +32,7 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Section principale -->
   <section class="hero">
     <div class="hero-content">
       <h2>Bienvenue sur le fansite d'Overlord</h2>
@@ -43,12 +45,12 @@
     </div>
   </section>
 
-  <!-- Section Opening -->
+  <!-- Section de l'opening -->
   <section class="opening" id="opening">
     <h2>🎵 Opening - Clattanoia (OxT)</h2>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/KOWcj7XKnfQ?autoplay=0&loop=1&playlist=KOWcj7XKnfQ" 
-              title="Overlord Opening Clattanoia"
+        title="Opening — Clattanoia (Overlord)"
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
@@ -58,7 +60,7 @@
   
 <!-- À propos -->
 <main>
-<!-- Section auteur/personnages -->
+<!-- Section auteur / personnages -->
 <section class="highlight">
   <div class="card">
     <div class="card-image">
@@ -114,14 +116,14 @@
 
     <h2>Galerie de personnages</h2>
     <div class="gallery">
-      <img src="img/ainz.jpg" alt="Ainz Ooal Gown">
-      <img src="img/albedo.jpg" alt="Albedo">
-      <img src="img/shalltear2.jpg" alt="Shalltear Bloodfallen">
+      <img loading="lazy" src="img/ainz.jpg" alt="Ainz Ooal Gown" srcset="img/ainz.jpg 320w, img/ainz.jpg 640w, img/ainz.jpg 1200w" sizes="(max-width:600px) 100vw, 33vw">
+      <img loading="lazy" src="img/albedo.jpg" alt="Albedo" srcset="img/albedo.jpg 320w, img/albedo.jpg 640w, img/albedo.jpg 1200w" sizes="(max-width:600px) 100vw, 33vw">
+      <img loading="lazy" src="img/shalltear2.jpg" alt="Shalltear Bloodfallen" srcset="img/shalltear2.jpg 320w, img/shalltear2.jpg 640w, img/shalltear2.jpg 1200w" sizes="(max-width:600px) 100vw, 33vw">
     </div>
   </section>
 </main>
 
-  <!-- Footer -->
+  <!-- Pied de page -->
   <footer>
   <div class="footer-left">
     <a href="https://github.com/Enzocys/fansite" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -139,5 +141,6 @@
     <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
   </div>
 </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

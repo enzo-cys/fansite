@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Overlord - Univers</title>
   <link rel="stylesheet" href="fansite.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -9,7 +10,8 @@
 <body>
   <header>
     <h1>Overlord Fansite</h1>
-    <nav>
+  <button id="nav-toggle" aria-label="Ouvrir le menu" aria-controls="site-navigation" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <nav id="site-navigation">
       <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="actualites.html">Actualités</a></li>
@@ -22,21 +24,20 @@
     </nav>
   </header>
 
-<main>
-  <section class="characters-grid">
+  <main>
+    <section class="characters-grid">
 
-    <!-- Ainz -->
-	
-<div class="character ainz-section">
-  <img src="img/ainz.jpg" alt="Ainz Ooal Gown">
-  <h3>Ainz Ooal Gown</h3>
-  <p>Le maître suprême de Nazarick, puissant et stratégique, dirige son royaume avec une poigne de fer.</p>
-</div>
+      <!-- Ainz -->
 
+      <div class="character ainz-section">
+        <img src="img/ainz.jpg" alt="Ainz Ooal Gown">
+        <h3>Ainz Ooal Gown</h3>
+        <p>Le maître suprême de Nazarick, puissant et stratégique, dirige son royaume avec une poigne de fer.</p>
+      </div>
 
-    <!-- Gardiens -->
-    <h2>Gardiens de Nazarick</h2>
-    <div class="grid">
+      <!-- Gardiens -->
+      <h2>Gardiens de Nazarick</h2>
+      <div class="grid">
       <div class="character-card">
         <img src="img/albedo2.jpg" alt="Albedo">
         <h3>Albedo</h3>
@@ -125,26 +126,28 @@
         <p>Pléiade spécialisée dans les armes et l’assassinat, rapide et redoutable.</p>
       </div>
     </div>
-  </section>
-</main>
-<footer>
-  <div class="footer-left">
-    <a href="https://github.com/Enzocys/fansite" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-  </div>
+    </main>
 
-  <div class="footer-center fan-links">
-    <a href="https://overlordmaruyama.fandom.com/wiki/Overlord_Wiki" target="_blank">Overlord Wiki (Fandom)</a>
-    <a href="https://www.nautiljon.com/animes/overlord.html" target="_blank">Nautiljon - Overlord</a>
-  </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-left">
+        <a href="https://github.com/Enzocys/fansite" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
++
+      <div class="footer-center fan-links">
+        <a href="https://overlordmaruyama.fandom.com/wiki/Overlord_Wiki" target="_blank">Overlord Wiki (Fandom)</a>
+        <a href="https://www.nautiljon.com/animes/overlord.html" target="_blank">Nautiljon - Overlord</a>
+      </div>
++
+      <div class="footer-right social-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
 
-  <div class="footer-right social-icons">
-    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-  </div>
-</footer>
-
-
-</body>
+    <script src="js/main.js"></script>
+  </body>
+  </html>
 </html>
